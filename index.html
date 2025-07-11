@@ -6,71 +6,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PEXR | 로블록스 커뮤니티를 선도합니다</title>
 
-  <meta property="og:title" content="PEXR | 로블록스 커뮤니티를 선도합니다" />
-  <meta property="og:description" content="PEXR | Robloxコミュニティリーダー" />
-  <meta property="og:image" content="http://pexr.kr/images/PEXR.png" />
+  <meta property="og:title" content="PEXR" />
+  <meta property="og:description" content="로블록스 커뮤니티를 선도합니다" />
+  <meta property="og:image" content="http://pexr.kr/assets/PEXR.png" />
   <meta property="og:url" content="https://pexr.kr" />
-  <link rel="stylesheet" href="font.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/font.css">
 
   <style>
     body,
     html {
       height: 100%;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       font-family: "Freesentation", "Pretendard JP", sans-serif;
-      background: linear-gradient(180deg, rgb(96, 193, 252) 0%, rgb(25, 94, 247) 100%);
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    img {
-      width: 20%;
-    }
-
-    .text {
-      font-size: 3vw;
-      font-weight: 700;
-      color: white;
-      margin: 0;
-    }
-
-    button {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border: none;
-      cursor: pointer;
+    .pexricons {
+      font-family: 'pexricons' !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <img src="/images/PEXR.svg" alt="이미지">
-    <p class="text">사이트 준비 중</p>
-  </div>
-  <button></button>
+  <div id="header-wrapper" class="fixed top-0 w-full z-50">
+    <div id="header" class="w-full">
+      <div class="w-full bg-white border-b border-gray-200">
+        <div class="max-w-screen-lg mx-auto flex items-center justify-between px-6 sm:px-12 py-3">
+          <!-- 로고 -->
+          <a href="/" id="logo" class="flex items-center justify-center aspect-[1/1] h-12">
+            <img src="/assets/logo.svg" alt="PEXR 로고" class="h-full w-auto select-none" draggable="false" />
+          </a>
 
-  <script>
-    var jp = false
-    document.querySelector("button").onclick = function(){
-      const p = document.querySelector('.text');
-      jp = !jp
-      p.textContent = jp ? 'サイト準備中' : '사이트 준비 중';
-      document.title = jp ? 'PEXR | Robloxコミュニティリーダー' : 'PEXR | 로블록스 커뮤니티를 선도합니다';
-    }
-  </script>
+          <!-- PC 전용 메뉴 -->
+          <!-- <div class="hidden sm:flex gap-8 font-medium text-lg relative">
+
+            <div class="group relative">
+              <button class="cursor-pointer" data-dropdown-target="그룹 소개">그룹 소개</button>
+            </div>
+
+            <div class="group relative">
+              <button class="cursor-pointer" data-dropdown-target="브랜드 소개">브랜드 소개</button>
+            </div>
+
+            <div class="group relative">
+              <button class="cursor-pointer" data-dropdown-target="알림마당">알림마당</button>
+            </div>
+
+            <div class="group relative">
+              <button class="cursor-pointer" data-dropdown-target="문의안내">문의안내</button>
+            </div>
+
+          </div> -->
+
+          <!-- 햄버거 메뉴 (모바일 전용) -->
+          <!-- <div id="hamburger" class="sm:hidden">
+            <button class="w-12 h-12 flex items-center justify-center cursor-pointer">
+              <span class="material-icons text-3xl! select-none" draggable="false">menu</span>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div id="dropdown-container" class="w-full bg-white border-b border-gray-200 hidden">
+      <div class="dropdown-panel max-w-screen-lg w-full mx-auto flex overflow-hidden px-12 py-3">
+        <div id="dropdown-left" class="w-[40%] p-4 border-r border-gray-200">
+          <h3 id="dropdown-title" class="text-3xl font-bold mb-6"></h3>
+          <p id="dropdown-desc" class="text-sm text-gray-600"></p>
+        </div>
+        <div id="dropdown-right" class="w-[60%] p-4 grid gap-y-6 grid-cols-1 font-semibold">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-18 w-full h-full">
+    <video class="w-full h-auto sm:h-full object-cover aspect-video sm:aspect-auto" src="assets/banner_kr.mp4" autoplay
+      muted loop playsinline></video>
+    <!-- <div class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover"
+      style="background-image: url('assets/banner1.png');">
+      <div class="bg-white bg-opacity-80 rounded-2xl p-6 max-w-screen-lg w-full flex flex-col gap-4">
+
+        <p class="text-5xl font-bold text-center mb-2">소식안내</p>
+          <iframe class="w-full aspect-[2/1] overflow-hidden" src="https://e.widgetbot.io/channels/1344404830247977051/1373254402340814919" allow="clipboard-write; fullscreen" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div> -->
+
+    <footer class="bg-gray-100 text-sm text-gray-700 border-t border-gray-300">
+      <div class="max-w-screen-lg mx-auto px-6 sm:px-12 py-6 space-y-6">
+
+        <!-- 1단: 링크 + 패밀리사이트 -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center font-semibold">
+          <!-- 좌측: 정책 링크 -->
+          <div class="flex flex-wrap gap-4">
+            <!-- <a href="/terms">이용약관</a> -->
+            <!-- <a href="/privacy">개인정보처리방침</a> -->
+            <!-- <a href="/youth">청소년보호정책</a>
+            <a href="/finance">전자금융거래약관</a> -->
+            <!-- <a href="/sitemap">사이트맵</a> -->
+          </div>
+
+          <!-- 우측: 패밀리사이트 드롭다운 -->
+          <select id="family-sites"
+            class="border border-gray-300 rounded px-3 py-1 text-sm bg-white focus:outline-none mt-4 sm:m-0"
+            onchange="if(this.value){ window.open(this.value); this.selectedIndex = 0; }">
+            <option value="" selected disabled hidden>Family Site</option>
+            <option value="//emporiumro.shop" class="pexricons align-middle select-none" draggable="false">⠀</option>
+          </select>
+        </div>
+
+        <!-- 2단: 저작권 및 안내문 -->
+        <div class="text-gray-500 text-xs leading-snug">
+          <img src="/assets/logo_w.svg" alt="PEXR 로고" class="h-12 w-auto select-none fill-gray-500 mb-2"
+            draggable="false" />
+          <!-- <p>대표이사 : null<br>
+서울특별시 중구 세종대로 110 (태평로1가, 서울특별시청)<br>
+사업자등록번호 : null <a onclick="window.open('http:\/\/www.ftc.go.kr\/info\/bizinfo\/communicationViewPopup.jsp?wrkr_no=null', 'popup', 'width=650,height=570,scrollbars=yes')" class="underline">사업자정보 확인</a> | 통신판매업신고 : null<br>
+E-Mail : <a href="mailto:null" class="underline">null</a>
+<br><br> -->
+          본 사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 엄격히 금지됩니다.<br>&copy; PEXR. All rights reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
