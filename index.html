@@ -89,14 +89,46 @@
   <div class="pt-18 w-full h-full">
     <video class="w-full h-auto sm:h-full object-cover aspect-video sm:aspect-auto" src="assets/banner_kr.mp4" autoplay
       muted loop playsinline></video>
-    <!-- <div class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover"
+    <div
+      class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover"
       style="background-image: url('/assets/banner1.png');">
       <div class="bg-white bg-opacity-80 rounded-2xl p-6 max-w-screen-lg w-full flex flex-col gap-4">
-
         <p class="text-5xl font-bold text-center mb-2">소식안내</p>
-          <iframe class="w-full aspect-[2/1] overflow-hidden" src="https://e.widgetbot.io/channels/1344404830247977051/1373254402340814919" allow="clipboard-write; fullscreen" frameborder="0" scrolling="no"></iframe>
+        <style>
+          .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            overflow: hidden;
+            border-radius: 1rem;
+          }
+
+          .iframe-wrapper iframe {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 130px);
+            /* header(60px) + chat(70px) */
+            border: none;
+          }
+
+          @media (min-width: 520px) {
+            .iframe-wrapper iframe {
+              left: -200px;
+              /* sidebar 넓이만큼 왼쪽 이동 */
+              width: calc(100% + 200px);
+              /* 잘린 만큼 너비 보정 */
+            }
+          }
+        </style>
+
+        <div class="iframe-wrapper">
+          <iframe src="https://e.widgetbot.io/channels/1344404830247977051/1373254402340814919"
+            allow="clipboard-write; fullscreen" scrolling="no"></iframe>
+        </div>
       </div>
-    </div> -->
+    </div>
 
     <footer class="bg-gray-100 text-sm text-gray-700 border-t border-gray-300">
       <div class="max-w-screen-lg mx-auto px-6 sm:px-12 py-6 space-y-6">

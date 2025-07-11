@@ -1,0 +1,9 @@
+{
+    "vscord.status.image.small.notInFile.text": "코 고는 중",
+    "vscord.status.image.small.idle.text": "Zzz",
+    "vscord.status.image.large.viewing.text": "{LANG} 파일 보는 중",
+    "vscord.status.image.large.idle.text": "딴짓하는 중",
+    "vscord.status.image.large.editing.text": "{LANG} 파일 편집 중",
+    "vscord.status.image.large.debugging.text": "{LANG} 파일 디버깅 중",
+    "vscord.app.name": "Visual Studio Code"
+}
