@@ -12,3 +12,15 @@
     font-style: normal;
     font-display: block;
 }
+
+.pexricons {
+    font-family: 'pexricons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-display: optional;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

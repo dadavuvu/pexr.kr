@@ -41,11 +41,11 @@
 //   }
 // };
 
-// const dropdownContainer = document.getElementById('dropdown-container');
-// const left = document.getElementById('dropdown-left');
-// const title = document.getElementById('dropdown-title');
-// const desc = document.getElementById('dropdown-desc');
-// const right = document.getElementById('dropdown-right');
+// const dropdownContainer = document.querySelector('#dropdown-container');
+// const left = document.querySelector('#dropdown-left');
+// const title = document.querySelector('#dropdown-title');
+// const desc = document.querySelector('#dropdown-desc');
+// const right = document.querySelector('#dropdown-right');
 
 // // 메뉴 버튼 이벤트 바인딩
 // document.querySelectorAll('#header [data-dropdown-target]').forEach(button => {
@@ -75,3 +75,8 @@
 // document.querySelector('#header-wrapper').addEventListener('mouseleave', () => {
 //   dropdownContainer.style.display = 'none';
 // });
+document.addEventListener('click', (e) => {
+    if (!document.querySelector('#select-btn').contains(e.target)) {
+        options.classList.add('hidden');
+    }
+});

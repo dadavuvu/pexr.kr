@@ -21,17 +21,6 @@
       margin: 0;
       font-family: "Freesentation", "Pretendard JP", sans-serif;
     }
-
-    .pexricons {
-      font-family: 'pexricons' !important;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
   </style>
 </head>
 
@@ -145,12 +134,19 @@
           </div>
 
           <!-- 우측: 패밀리사이트 드롭다운 -->
-          <select id="family-sites"
-            class="border border-gray-300 rounded px-3 py-1 text-sm bg-white focus:outline-none mt-4 sm:m-0"
-            onchange="if(this.value){ window.open(this.value); this.selectedIndex = 0; }">
-            <option value="" selected disabled hidden>Family Site</option>
-            <option value="//emporiumro.shop" class="pexricons align-middle select-none" draggable="false">⠀</option>
-          </select>
+          <div class="relative inline-block w-24 text-gray-700 text-center" id="custom-select">
+            <button id="select-btn" onclick="document.querySelector('#options').classList.toggle('hidden')"
+              class="w-full bg-white border border-gray-300 rounded px-3 py-1 flex items-center justify-between ring-0 cursor-pointer">
+              <p class="w-full">Family Site</p>
+            </button>
+
+            <div id="options" class="absolute w-full bg-white border border-gray-300 rounded overflow-auto hidden">
+              <a href="//emporiumro.shop" target="_blank"
+                class="flex items-center w-full text-sm text-gray-800 select-none px-3 py-1">
+                <span class="pexricons text-lg align-middle select-none w-full" draggable="false">⠀</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- 2단: 저작권 및 안내문 -->
