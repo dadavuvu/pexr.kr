@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEXR | Robloxコミュニティリーダー</title>
+
+  <meta property="og:title" content="PEXR" />
+  <meta property="og:description" content="Robloxコミュニティリーダー" />
+  <meta property="og:image" content="http://pexr.kr/assets/PEXR.png" />
+  <meta property="og:url" content="https://pexr.kr" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/font.css">
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: "Freesentation", "Pretendard JP", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-wrapper" class="fixed top-0 w-full z-50">
+    <div id="header" class="w-full">
+      <div class="w-full bg-white border-b border-gray-200">
+        <div class="max-w-screen-lg mx-auto flex items-center justify-between px-6 sm:px-12 py-3">
+          <!-- 로고 -->
+          <a href="/jp" id="logo" class="flex items-center justify-center aspect-[1/1] h-12">
+            <img src="/assets/logo.svg" alt="PEXR CI" class="h-full w-auto select-none" draggable="false" />
+          </a>
+
+          <a href="/">
+            <button class="w-12 h-12 flex items-center justify-center cursor-pointer font-bold">
+              KR
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="dropdown-container" class="w-full bg-white border-b border-gray-200 hidden">
+      <div class="dropdown-panel max-w-screen-lg w-full mx-auto flex overflow-hidden px-12 py-3">
+        <div id="dropdown-left" class="w-[40%] p-4 border-r border-gray-200">
+          <h3 id="dropdown-title" class="text-3xl font-bold mb-6"></h3>
+          <p id="dropdown-desc" class="text-sm text-gray-600"></p>
+        </div>
+        <div id="dropdown-right" class="w-[60%] p-4 grid gap-y-6 grid-cols-1 font-semibold">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-18 w-full h-full">
+    <video class="w-full h-auto sm:h-full object-cover aspect-video sm:aspect-auto" src="assets/banner_jp.mp4" autoplay
+      muted loop playsinline></video>
+    <div
+      class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover"
+      style="background-image: url('/assets/banner1.png');">
+      <div class="relative bg-white bg-opacity-80 rounded-2xl p-12 max-w-screen-xl w-full flex flex-col gap-4">
+        <p class="text-3xl font-bold mb-6">PEXRの公式サイトにご訪問いただき、誠にありがとうございます。</p>
+        <p>
+          私たちは「韓国のロブロックス開発市場のリーダー」を目指す、新進気鋭のスタートアップグループです。
+          単なるゲーム制作を超えて、ユーザーの皆様に驚きと感動をもたらす体験の創造を目指しています。<br>
+          <br>
+          私たちが最も大切にしているのは、「経験」という価値です。<br>
+          失敗を恐れずに挑戦を続け、その過程で得たすべての学びを糧に、より洗練された没入型ゲームとコンテンツを創り上げています。
+          一人ひとりの想像が現実になるその日まで、私たちは歩みを止めることはありません。<br>
+          <br>
+          共に夢を描き、共に創り上げる未来の旅路を、皆様とご一緒できれば幸いです。<br>
+          今後とも変わらぬご支援を賜りますよう、よろしくお願い申し上げます。
+        </p>
+        <p class="text-2xl text-right font-bold mt-4">PEXRグループ代表　ズムズム</p>
+      </div>
+    </div>
+
+    <footer class="bg-gray-100 text-sm text-gray-700 border-t border-gray-300">
+      <div class="max-w-screen-lg mx-auto px-6 sm:px-12 py-6 space-y-6">
+
+        <!-- 1단: 링크 + 패밀리사이트 -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center font-semibold">
+          <!-- 좌측: 정책 링크 -->
+          <div class="flex flex-wrap gap-4">
+          </div>
+
+          <!-- 우측: 패밀리사이트 드롭다운 -->
+          <!-- <div class="relative inline-block w-24 text-gray-700 text-center" id="custom-select">
+            <button id="select-btn" onclick="document.querySelector('#options').classList.toggle('hidden')"
+              class="w-full bg-white border border-gray-300 rounded px-3 py-1 flex items-center justify-between ring-0 cursor-pointer">
+              <p class="w-full">Family Site</p>
+            </button>
+
+            <div id="options" class="absolute w-full bg-white border border-gray-300 rounded overflow-auto hidden">
+              <a href="//emporiumro.shop" target="_blank"
+                class="flex items-center w-full text-sm text-gray-800 select-none px-3 py-1">
+                <span class="pexricons text-lg align-middle select-none w-full" draggable="false">⠀</span>
+              </a>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- 2단: 저작권 및 안내문 -->
+        <div class="text-gray-500 text-xs leading-snug">
+          <img src="/assets/logo_w.svg" alt="PEXR CI" class="h-12 w-auto select-none fill-gray-500 mb-2"
+            draggable="false" />
+          E-Mail : <a href="mailto:admin@pexr.kr" class="underline">admin@pexr.kr</a>
+          <br><br>&copy; PEXR. All rights reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="/index.js"></script>
+</body>
+
+</html>
