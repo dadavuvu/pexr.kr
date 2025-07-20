@@ -33,7 +33,7 @@ const dropdownData = {
     desc: '',
     items: [
       { label: '공식 지원 커뮤니티', href: '/links/community', external: true },
-      { label: '이메일 문의', href: 'mailto:support@pexr.net', external: true },
+      { label: '이메일 문의', href: 'mailto:admin@pexr.kr', external: true },
       { label: '<span class="pexricons align-middle select-none" draggable="false">○</span> 문의센터', href: '/links/primedash', external: true },
       { label: '<span class="pexricons align-middle select-none" draggable="false">⠀</span> 문의센터', href: '/links/emporium', external: true },
       { label: '<span class="pexricons align-middle select-none" draggable="false">●</span> 문의센터', href: '/links/xr', external: true }
