@@ -38,19 +38,23 @@
           <div class="hidden sm:flex gap-8 font-medium text-lg relative">
 
             <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="그룹 소개" onclick="location.href = '/about'">그룹 소개</button>
+              <button class="cursor-pointer" data-dropdown-target="그룹 소개" onclick="location.href = '/about'">그룹
+                소개</button>
             </div>
 
             <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="브랜드 소개" onclick="location.href = '/brands'">브랜드 소개</button>
+              <button class="cursor-pointer" data-dropdown-target="브랜드 소개" onclick="location.href = '/brands'">브랜드
+                소개</button>
             </div>
 
             <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="알림마당" onclick="location.href = '/announce'">알림마당</button>
+              <button class="cursor-pointer" data-dropdown-target="알림마당"
+                onclick="location.href = '/announce'">알림마당</button>
             </div>
 
             <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="문의안내" onclick="location.href = '/links'">문의안내</button>
+              <button class="cursor-pointer" data-dropdown-target="문의안내"
+                onclick="location.href = '/links'">문의안내</button>
             </div>
 
           </div>
@@ -76,12 +80,38 @@
     </div>
   </div>
   <div class="pt-18 w-full h-full">
-    <div
-      class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover"
+    <div class="p-6 sm:py-12 w-full h-auto flex items-center justify-center bg-cover"
       style="background-image: url('/assets/banner1.png');">
-      <div class="relative bg-white bg-opacity-80 rounded-2xl p-6 max-w-screen-lg w-full flex flex-col gap-4">
-        <p class="text-5xl font-bold text-center mb-2">페이지를 찾을 수 없음</p>
-        <div class="w-full aspect-[2/1] overflow-hidden">404 Page Not Found</div>
+      <div class="relative bg-white bg-opacity-80 rounded-2xl p-12 max-w-screen-xl w-full flex flex-col gap-4">
+        <div class="w-full overflow-hidden grid grid-cols-4">
+          <div class="w-full border-r-1 border-gray-200 p-6 hidden sm:block">
+            <div class="grid gap-y-6 grid-cols-1">
+              <p class="text-3xl font-bold">그룹 소개</p>
+              <a href="/about/hello" class="flex items-center gap-1 text-xl w-fit text-blue-500">인사말</a>
+              <a href="/about/goal" class="flex items-center gap-1 text-xl w-fit">경영목표</a>
+              <a href="/about/history" class="flex items-center gap-1 text-xl w-fit">연혁 및 조직도</a>
+              <a href="/about/branding" class="flex items-center gap-1 text-xl w-fit">그룹상징</a>
+              <a href="/about/portfolio" class="flex items-center gap-1 text-xl w-fit">포트폴리오</a>
+            </div>
+          </div>
+          <div class="col-span-4 sm:col-span-3">
+            <p class="text-5xl font-bold pb-6 text-center border-b-1 border-gray-200">인사말</p>
+            <div class="p-6">
+              <p class="text-3xl font-bold mb-6">안녕하십니까, PEXR을 방문해주셔서 감사합니다.</p>
+              <p>저희는 “한국 로블록스 개발 시장의 선두주자”를 꿈꾸는 신생 스타트업 그룹입니다. 각자의 개성과 전문성을 지닌 크리에이터들—즉, 개발자들이 한 팀이 되어 매일같이 도전하고 있습니다.
+                우리의 목표는 단순한 게임 제작을 넘어, 놀라움과 감동을 선사하는 경험을 만드는 것입니다.<br>
+                <br>
+                PEXR은 ‘경험’의 가치를 믿습니다.<br>
+                실패를 두려워하지 않고 끊임없이 시도하며, 그 과정에서 얻은 모든 경험을 밑거름 삼아 더 정교하고, 더 몰입도 높은 게임과 에셋을 만들어가고 있습니다.
+                유저 한 사람 한 사람의 상상이 현실이 되는 그날까지, 우리는 멈추지 않고 나아갈 것입니다.<br>
+                <br>
+                함께 꿈꾸고, 함께 만들어 가는 미래, 그 여정을 유저 여러분과 함께 걸어가고 싶습니다.<br>
+                앞으로도 많은 관심과 응원 부탁드립니다.
+              </p>
+              <p class="text-2xl text-right font-bold mt-4">PEXR 그룹 대표 즘즘 올림.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -92,11 +122,11 @@
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center font-semibold">
           <!-- 좌측: 정책 링크 -->
           <div class="flex flex-wrap gap-4">
-            <!-- <a href="/terms">이용약관</a> -->
-            <!-- <a href="/privacy">개인정보처리방침</a> -->
-            <!-- <a href="/youth">청소년보호정책</a>
-            <a href="/finance">전자금융거래약관</a> -->
-            <!-- <a href="/sitemap">사이트맵</a> -->
+            <a href="/terms">이용약관</a>
+            <a href="/privacy">개인정보처리방침</a>
+            <a href="/youth">청소년보호정책</a>
+            <a href="/finance">전자금융거래약관</a>
+            <a href="/sitemap">사이트맵</a>
           </div>
 
           <!-- 우측: 패밀리사이트 드롭다운 -->
@@ -121,16 +151,16 @@
             draggable="false" />
           <!-- <p>대표이사 : null<br>
 서울특별시 중구 세종대로 110 (태평로1가, 서울특별시청)<br>
-사업자등록번호 : null <a onclick="window.open('http:\/\/www.ftc.go.kr\/info\/bizinfo\/communicationViewPopup.jsp?wrkr_no=null', 'popup', 'width=650,height=570,scrollbars=yes')" class="underline">사업자정보 확인</a> | 통신판매업신고 : null<br>
-E-Mail : <a href="mailto:null" class="underline">null</a>
-<br><br> -->
+사업자등록번호 : null <a onclick="window.open('http:\/\/www.ftc.go.kr\/info\/bizinfo\/communicationViewPopup.jsp?wrkr_no=null', 'popup', 'width=650,height=570,scrollbars=yes')" class="underline">사업자정보 확인</a> | 통신판매업신고 : null<br> -->
+          E-Mail : <a href="mailto:admin@pexr.kr" class="underline">admin@pexr.kr</a>
+          <br><br>
           본 사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 엄격히 금지됩니다.<br>&copy; PEXR. All rights reserved.</p>
         </div>
 
       </div>
     </footer>
   </div>
-  <script src="index.js"></script>
+  <script src="/index.js"></script>
 </body>
 
 </html>
