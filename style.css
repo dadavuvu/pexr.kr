@@ -16,7 +16,6 @@
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --breakpoint-lg: 64rem;
@@ -222,9 +221,6 @@
   .col-span-4 {
     grid-column: span 4 / span 4;
   }
-  .mx-0 {
-    margin-inline: calc(var(--spacing) * 0);
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -246,9 +242,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .inline-block {
     display: inline-block;
   }
@@ -267,11 +260,11 @@
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
-  }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
   }
   .h-\[clamp\(4rem\,10vw\,10rem\)\] {
     height: clamp(4rem, 10vw, 10rem);
@@ -288,9 +281,6 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
-  .w-1\/1 {
-    width: calc(1/1 * 100%);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -299,9 +289,6 @@
   }
   .w-1\/4 {
     width: calc(1/4 * 100%);
-  }
-  .w-1\/5 {
-    width: calc(1/5 * 100%);
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
@@ -312,35 +299,17 @@
   .w-2\/4 {
     width: calc(2/4 * 100%);
   }
-  .w-2\/5 {
-    width: calc(2/5 * 100%);
-  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
-  .w-3\/1 {
-    width: calc(3/1 * 100%);
-  }
   .w-3\/4 {
     width: calc(3/4 * 100%);
-  }
-  .w-3\/5 {
-    width: calc(3/5 * 100%);
-  }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
-  }
-  .w-4\/5 {
-    width: calc(4/5 * 100%);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
   .w-24 {
     width: calc(var(--spacing) * 24);
-  }
-  .w-48 {
-    width: calc(var(--spacing) * 48);
   }
   .w-\[40\%\] {
     width: 40%;
@@ -476,6 +445,9 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .bg-\[\#1B00BC\] {
+    background-color: #1B00BC;
+  }
   .bg-\[\#60C1FC\] {
     background-color: #60C1FC;
   }
@@ -488,14 +460,14 @@
   .bg-\[\#0553d1\] {
     background-color: #0553d1;
   }
+  .bg-\[\#1955FF\] {
+    background-color: #1955FF;
+  }
   .bg-\[\#002060\] {
     background-color: #002060;
   }
   .bg-\[\#184835\] {
     background-color: #184835;
-  }
-  .bg-\[\#384835\] {
-    background-color: #384835;
   }
   .bg-blue-400 {
     background-color: var(--color-blue-400);
@@ -511,9 +483,6 @@
   }
   .bg-center {
     background-position: center;
-  }
-  .fill-\[\#002060\] {
-    fill: #002060;
   }
   .fill-gray-500 {
     fill: var(--color-gray-500);
@@ -532,18 +501,6 @@
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
-  }
-  .p-18 {
-    padding: calc(var(--spacing) * 18);
-  }
-  .p-24 {
-    padding: calc(var(--spacing) * 24);
-  }
-  .p-32 {
-    padding: calc(var(--spacing) * 32);
-  }
-  .p-48 {
-    padding: calc(var(--spacing) * 48);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -571,9 +528,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-left {
-    text-align: left;
   }
   .text-right {
     text-align: right;
@@ -633,10 +587,6 @@
     --tw-leading: var(--leading-snug);
     line-height: var(--leading-snug);
   }
-  .font-black {
-    --tw-font-weight: var(--font-weight-black);
-    font-weight: var(--font-weight-black);
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -653,6 +603,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#1B00BC\] {
+    color: #1B00BC;
+  }
   .text-\[\#60C1FC\] {
     color: #60C1FC;
   }
@@ -665,14 +618,14 @@
   .text-\[\#0553d1\] {
     color: #0553d1;
   }
+  .text-\[\#1955FF\] {
+    color: #1955FF;
+  }
   .text-\[\#002060\] {
     color: #002060;
   }
   .text-\[\#184835\] {
     color: #184835;
-  }
-  .text-\[\#384835\] {
-    color: #384835;
   }
   .text-blue-500 {
     color: var(--color-blue-500);
@@ -738,13 +691,6 @@
       display: none;
     }
   }
-  .sm\:sm\:flex {
-    @media (width >= 40rem) {
-      @media (width >= 40rem) {
-        display: flex;
-      }
-    }
-  }
   .sm\:aspect-auto {
     @media (width >= 40rem) {
       aspect-ratio: auto;
@@ -783,11 +729,6 @@
   .sm\:py-12 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 12);
-    }
-  }
-  .sm\:text-center {
-    @media (width >= 40rem) {
-      text-align: center;
     }
   }
   .sm\:text-4xl {
