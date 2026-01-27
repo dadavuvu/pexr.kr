@@ -22,159 +22,44 @@
       font-family: "Freesentation", "Pretendard JP", sans-serif;
     }
   </style>
+
+  <style>
+    body,
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    html {
+      background: linear-gradient(90deg,rgba(27, 0, 188, 1) 0%, rgba(25, 85, 255, 1) 100%);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 40%;
+    }
+
+    .text {
+      font-size: 3vw;
+      font-weight: 700;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="header-wrapper" class="fixed top-0 w-full z-50">
-    <div id="header" class="w-full">
-      <div class="w-full bg-white border-b border-gray-200">
-        <div class="max-w-screen-lg mx-auto flex items-center justify-between px-6 sm:px-12 py-3">
-          <!-- 로고 -->
-          <a href="/" id="logo" class="flex items-center justify-center h-12">
-            <img src="/assets/logo.svg" alt="Similarity 로고" class="h-full w-auto select-none" draggable="false" />
-          </a>
-
-          <!-- PC 전용 메뉴 -->
-          <div class="hidden sm:flex gap-8 font-medium text-lg relative">
-
-            <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="그룹 소개" onclick="location.href = '/about'">그룹
-                소개</button>
-            </div>
-
-            <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="브랜드 소개" onclick="location.href = '/brands'">브랜드
-                소개</button>
-            </div>
-
-            <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="알림마당"
-                onclick="location.href = '/announce'">알림마당</button>
-            </div>
-
-            <div class="group relative">
-              <button class="cursor-pointer" data-dropdown-target="문의안내"
-                onclick="location.href = '/links'">문의안내</button>
-            </div>
-            <a href="/jp">
-              <button class="w-12 flex items-center justify-center cursor-pointer font-bold">
-                JP
-              </button>
-            </a>
-          </div>
-
-          <!-- 햄버거 메뉴 (모바일 전용) -->
-          <div id="hamburger" class="sm:hidden">
-            <button class="w-12 h-12 flex items-center justify-center cursor-pointer">
-              <span class="material-icons text-3xl! select-none" draggable="false">menu</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="dropdown-container" class="w-full bg-white border-b border-gray-200 hidden">
-      <div class="dropdown-panel max-w-screen-lg w-full mx-auto flex overflow-hidden px-12 py-3">
-        <div id="dropdown-left" class="w-[40%] p-4 border-r border-gray-200">
-          <h3 id="dropdown-title" class="text-3xl font-bold mb-6"></h3>
-          <p id="dropdown-desc" class="text-sm text-gray-600"></p>
-        </div>
-        <div id="dropdown-right" class="w-[60%] p-4 grid gap-y-6 grid-cols-1 font-semibold">
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <img src="assets/logo_w.svg" alt="이미지"><br>
+    <p class="text">리뉴얼을 진행 중입니다.<br></p><a href="web">이전 홈페이지 접속하기</a>
   </div>
-  <div class="pt-18 w-full h-full">
-    <video class="w-full h-auto sm:h-full object-cover aspect-video sm:aspect-auto" src="assets/banner_kr.mp4" autoplay
-      muted loop playsinline></video>
-    <div
-      class="p-6 sm:py-12 w-full h-auto sm:h-full aspect-video sm:aspect-auto flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('/assets/banner0.png');">
-      <div class="bg-white bg-opacity-80 rounded-2xl p-6 max-w-screen-lg w-full flex flex-col gap-4">
-        <p class="text-5xl font-bold text-center mb-2">소식안내</p>
-        <style>
-          .iframe-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 2 / 1;
-            overflow: hidden;
-            border-radius: 1rem;
-          }
-
-          .iframe-wrapper iframe {
-            position: absolute;
-            top: -60px;
-            left: 0;
-            width: 100%;
-            height: calc(100% + 130px);
-            /* header(60px) + chat(70px) */
-            border: none;
-          }
-
-          @media (min-width: 520px) {
-            .iframe-wrapper iframe {
-              left: -200px;
-              /* sidebar 넓이만큼 왼쪽 이동 */
-              width: calc(100% + 200px);
-              /* 잘린 만큼 너비 보정 */
-            }
-          }
-        </style>
-
-        <div class="iframe-wrapper">
-          <iframe src="https://e.widgetbot.io/channels/1344404830247977051/1373254402340814919"
-            allow="clipboard-write; fullscreen" scrolling="no"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <footer class="bg-gray-100 text-sm text-gray-700 border-t border-gray-300">
-      <div class="max-w-screen-lg mx-auto px-6 sm:px-12 py-6 space-y-6">
-
-        <!-- 1단: 링크 + 패밀리사이트 -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center font-semibold">
-          <!-- 좌측: 정책 링크 -->
-          <div class="flex flex-wrap gap-4">
-            <a href="/terms">이용약관</a>
-            <a href="/privacy">개인정보처리방침</a>
-            <a href="/youth">청소년보호정책</a>
-            <a href="/finance">전자금융거래약관</a>
-            <a href="/sitemap">사이트맵</a>
-          </div>
-
-          <!-- 우측: 패밀리사이트 드롭다운 -->
-          <div class="relative inline-block w-24 text-gray-700 text-center" id="custom-select">
-            <button id="select-btn" onclick="document.querySelector('#options').classList.toggle('hidden')"
-              class="w-full bg-white border border-gray-300 rounded px-3 py-1 flex items-center justify-between ring-0 cursor-pointer">
-              <p class="w-full">Family Site</p>
-            </button>
-
-            <div id="options" class="absolute w-full bg-white border border-gray-300 rounded overflow-auto hidden">
-              <a href="//emporiumro.shop" target="_blank"
-                class="flex items-center w-full text-sm text-gray-800 select-none px-3 py-1">
-                <span class="pexricons text-lg align-middle select-none w-full" draggable="false">⠆</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2단: 저작권 및 안내문 -->
-        <div class="text-gray-500 text-xs leading-snug">
-          <img src="/assets/logo_w.svg" alt="Similarity 로고" class="h-8 w-auto select-none fill-gray-500 mb-2"
-            draggable="false" />
-          <!-- <p>대표이사 : null<br>
-서울특별시 중구 세종대로 110 (태평로1가, 서울특별시청)<br>
-사업자등록번호 : null <a onclick="window.open('http:\/\/www.ftc.go.kr\/info\/bizinfo\/communicationViewPopup.jsp?wrkr_no=null', 'popup', 'width=650,height=570,scrollbars=yes')" class="underline">사업자정보 확인</a> | 통신판매업신고 : null<br> -->
-          E-Mail : <a href="mailto:admin@pexr.kr" class="underline">admin@pexr.kr</a>
-          <br><br>
-          본 사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 엄격히 금지됩니다.<br>&copy; Similarity. All rights reserved.</p>
-        </div>
-
-      </div>
-    </footer>
-
-
-  </div>
-  <script src="/index.js"></script>
 </body>
 
 </html>
